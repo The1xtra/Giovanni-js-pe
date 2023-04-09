@@ -206,16 +206,6 @@
     });
     
     function validateForm() {
-    let naam = document.getElementById('naam').value;
-    let voornaam = document.getElementById('voornaam').value;
-    let gebruikersnaam = document.getElementById('gebruikersnaam').value;
-    let email = document.getElementById('inputEmail4').value;
-    let wachtwoord = document.getElementById('inputPassword4').value;
-    let wachtwoord2 = document.getElementById('inputPassword42').value;
-    let adres = document.getElementById('adres').value;
-    let land = document.getElementById('land').value;
-    let provincie = document.getElementById('provincie').value;
-    let postcode = document.getElementById('postcode').value;
 
         let errors = [];
         checkEmptyField(document.getElementById("voornaam"), "Het veld voornaam is vereist.");
@@ -237,11 +227,11 @@
     return re.test(emailadres);
   }
 
-  if (inputPassword.value === '' || confirmPassword.value === '') {
+  if (inputPassword.value === '' || inputPassword2.value === '') {
     errors.push('Vul beide wachtwoorden in.');
-  } else if (password.value.length < 8) {
+  } else if (inputPassword.value.length < 8) {
     errors.push('Wachtwoord moet minstens 8 karakters bevatten.');
-  } else if (password.value !== confirmPassword.value) {
+  } else if (inputPassword.value !== inputPassword2.value) {
     errors.push('Wachtwoorden komen niet overeen.');
   }
 function validatePayment(veld){
